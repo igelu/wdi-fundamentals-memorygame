@@ -39,12 +39,15 @@ var flipCard = function() {
   }
 };
 var createBoard = function() {
-  for (var i = 0; i < cards.length; i++) {
+
+    
     var cardElement = document.createElement('img');
+
     cardElement.setAttribute('src', "images/back.png");
     cardElement.setAttribute('data-id', 'i');
     document.getElementsById('game-board')[0].appendChild(cardElement);
     document.getElementsById('game-board').addEventListener('click', flipCard);
+      for (var i = 0; i < cards.length; i++) {
   }
 };
 createBoard();
