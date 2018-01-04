@@ -1,0 +1,10 @@
+//Page Loads with four card backs displayed
+//user clicks one card
+//card flips over to display suit and rank
+//user click second card
+//card flips over to display suit and rank
+//compare two cards to determine match based on rank
+//if match, stay flipped and alert "You found a match!"
+//if no match, flip cards to backs and alert "Sorry, try again"
+//when all cards have matches found, alert "You win!"
+//clear reload repeat
