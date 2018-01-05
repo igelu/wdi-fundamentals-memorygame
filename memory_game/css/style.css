@@ -96,3 +96,11 @@ footer {
   color: #F15B31;
   weight: 700;
 }
+.score {
+  color: #000000;
+  padding: 30px 20px;
+  text-align: center;
+}
+.reset {
+
+}

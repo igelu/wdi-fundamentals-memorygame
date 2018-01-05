@@ -1,3 +1,4 @@
+// cards is an array that contains 4 card objects
 var cards = [{
         rank: "queen",
         suit: "hearts",
@@ -42,10 +43,13 @@ var checkForMatch = function() {
     }
 };
 
-
+/**
+ * flipCard find the card id from the card variable, changes the image and
+ * if two cards are in play, runs checkForMatch function
+ */
 var flipCard = function() {
     var cardId = this.getAttribute('data-id');
-    console.log(cards[cardId].cardImage);
+  //  console.log(cards[cardId].cardImage);
     this.setAttribute('src', cards[cardId].cardImage);
     cardsInPlay.push(cards[cardId].rank);
     if (cardsInPlay.length === 2) {
@@ -53,7 +57,10 @@ var flipCard = function() {
     }
 };
 
-
+/**
+ * createBoard places the card back images on the dom, event on click for
+ * flipCard function
+ */
 var createBoard = function() {
     for (var i = 0; i < cards.length; i++) {
         var cardElement = document.createElement('img');
@@ -61,11 +68,21 @@ var createBoard = function() {
         cardElement.setAttribute('data-id', i);
         cardElement.addEventListener('click', flipCard);
         document.getElementById('game-board').appendChild(cardElement);
+        var resetButton = document.getElementsByTagName('button');
     }
 };
+
+/** delete all card inside of the board, including cardinplay
+ * update userscore dom element
+ * then call create board.
+ */
 var resetBoard = function() {
-  //delete all card inside of the board, including cardinplay
-  //update userscore dom element
-  //then call create board.
+    var resetButton = document.getElementsByTagName('button');
+    resetButton.addEventListener('click', );
+
 }
+
+var scoreText = document.createElement('p')
+scoreText.textContent = score
 createBoard();
+// resetBoard();
